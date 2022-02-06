@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Week 4 - Julie Brodeur</title>
+    <title>Quiz Week 4 - Julie Brodeur</title>
 	<style>
 		table, th, td {
   			border: 1px solid black;
@@ -12,29 +12,30 @@
 <body>
     <table>
         <script type=text/javascript>
+			document.write('<table>');
+			for (let row = 0; row <= 10; row++) {
+				if (row == 0) {
+					document.write('<tr><td style = "color:pink; font-weight:bold">&#215</td>');
+				}
+				else { 
+					document.write('<tr><td style="color:red; font-weight:bold">' + row + '</td>'); 
+				}
 
-			document.write('<tr style="color:blue; font-weight:bold;">');
-			document.write('<td style="color:pink; font-weight:bold;">&#215;</td>');
-			for (let col = 1; col <= 10; col++) {
-				document.write('<td>' + col + '</td>');
-			}
-			document.write('</tr">');
-			for (let row = 1; row <= 10; row++) {
-				document.write('<tr>');
-				document.write('<td style="color:red; font-weight:bold;">' + row + '</td>');
-
-					for (let col = 1; col <= 10; col++) {
-						if (col == row) {
-							document.write('<td style="color: green; font-weight: bold;">' + row*col + '</td>');
-						} 
-						else {
-							document.write('<td>' + row*col + '</td>');
-						}
+				for (let col = 1; col <= 10; col++) {
+					if (row == 0) {
+						document.write('<td style="color:blue; font-weight:bold">' + col + '</td>');
+					} 
+					else if (col==row) {
+						document.write('<td style="color:green; font-weight:bold">' + (col * row) + '</td>');
 					}
-			document.write('</tr>');
+					else {
+						document.write('<td>' + (col * row) + '</td>');
 
+					}
+				}
+				document.write('</tr>');
 			}
-
+			document.write('</table>');
        </script>
     </table>
 </body>
