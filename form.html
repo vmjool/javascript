@@ -1,0 +1,70 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Validate me</title>
+    </head>
+    <body>
+        <p>At least one piece of data has to come in from every input type.</p>
+    
+        <form name = "thisForm" action = "#" onsubmit="return validateForm()" method="post" method = "get"><br/>
+            Name:<input type = "text" name = "fullname" placeholder="Enter Full Name"/><br/>
+            Gender:<br/>
+            Male<input type = "radio" name = "gender" value="male"/>
+            Female<input type = "radio" name = "gender" value="female"/><br/>
+        
+            Hobbies<br/>
+            Baseball <input type = "checkbox" name = "hobbies" value = "baseball" />  
+            Football <input type = "checkbox" name = "hobbies" value = "football" />  
+            Hockey <input type = "checkbox" name = "hobbies" value = "hockey" /><br/>
+    
+            Favorite Show <select name = "show">
+            <option value = "">Choose Below</option>
+            <option value = "ATHF">Aqua Teen Hunger Force</option>
+            <option value = "Family Guy">Family Guy</option>
+            <option value = "Simpsons">Simpsons</option>
+            </select><br/>
+
+            Comments<br/>
+            <textarea cols = "50" rows = "6" name = "comments">Enter Comments</textarea><br/>
+            <input type = "submit" name = "submit" value = "enter me" />
+        </form>
+    
+        <script type="text/javascript">
+        // console.log(document.forms);
+        function validateForm() {
+            for (var i=0; i<document.forms[0].length; i++){
+                if (document.forms[0][i].type == 'text'){
+                    if (document.forms[0][i].value === ''){
+                        alert('Please enter your ' + document.forms[0][i].name);
+                        return false;
+                    } 
+                    var radioGroup = false;
+                    if (document.forms[0].elements[i].type == 'radio'){
+
+                        let msg = document.forms[0].elements[i].name;
+                        const numElmnts = document.getElementByName(msg).length;
+                        let elem = document.getElementByName(msg);
+
+                        for (var j = 0; j < numElmnts; j++) {
+                        if (elem[j].checked == true) {
+                            radioGroup = true;
+                        }
+            
+
+                    if (radioGroup == false) {
+                        document.getElementById(errorarea).innerHTML = 'Please select your ' + msg;
+                        document.getElementById(errorarea).style.color = '#ff0000';
+                        document.forms[0].elements[i].focus();
+
+                    else {
+                        document.getElementById(errorarea).innerHTML = '';
+                    }
+                }
+            }
+        }
+        </script>
+
+</body>
+</html>
