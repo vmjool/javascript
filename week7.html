@@ -1,0 +1,32 @@
+<html>
+<head>Week 7</head>
+<body>
+<script>
+
+// must use an array (I've called it oddNumbers) to display odd numbers in the numbers array
+// I only get an array of 1 when I run this.
+
+    function displayOddNumbers(){
+        const numbers = [1,2,3,4,5,6,7,8];
+        var oddNumbers = [];
+        for(var i=1; i<numbers.length; i++) {
+            if((i % 2) != 0); {
+            oddNumbers.push(i);
+            }
+            return oddNumbers;
+        }
+    }
+    console.log(displayOddNumbers()); // should return [1,3,5,7] it only returns 1
+
+/* This works, but doesn't use arrays
+for(var i=1;i<=7;i++)
+{
+    if((i%2)!=0){
+    document.write(i + ", ");
+    }
+}
+*/
+
+</script>
+</body>
+</html>
