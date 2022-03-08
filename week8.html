@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Basic Page Needs -->
+        <meta charset="utf-8">
+        <title>Pizza Menu</title>
+        <meta name="final quiz" content="">
+        <meta name="Julie Brodeur" content="">
+
+        <!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+
+        <h2>Pizza Menu</h2>
+                     <!-- Start of form-->
+                     <form action="http://www.example.com/menu.php" method="post">
+           
+                    <!-- First task of form: order food from multi-select menus. Grouped by appetizers, entrees, and desserts. -->
+                    <fieldset>
+                    <legend id="ord">Order Food</legend>
+                        <label><strong>Pizza:</strong>
+                            <select name="pizza">
+                                <option value="slice">Slice of pizza $2.00</option>
+                            </select>
+                        </label>
+
+                        <input type="submit" name="add" value="Add to cart" /><br />
+
+                        <label><strong>Toppings:</strong>
+                            <select name="toppings">
+                                <option value="pep">Pepperoni $0.25</option>
+                                <option value="meat">Meatballs $0.35</option>
+                                <option value="shroom">Mushrooms $0.40</option>
+                                <option value="oliv">Olives $0.20</option>
+                            </select>
+                        </label>
+
+                        <input type="submit" name="add" value="Add to cart" /><br />
+
+                        <label><strong>Sides:</strong>
+                            <select name="sides">
+                                <option value="potsal">Potato salad $1.25</option>
+                                <option value="hum">Hummus $2.50</option>
+                                <option value="caesar">Caesar salad $3.50</option>
+                                <option value="gardn">Garden salad $2.25</option>
+                            </select>
+                        </label>
+
+                        <input type="submit" name="add" value="Add to cart" /><br />
+                
+                        <label><strong>Drinks:</strong>
+                            <select name="desserts">
+                                <option value="sdasmall">Soda: small $1.95</option>
+                                <option value="sdamed">Soda: medium $2.20</option>
+                                <option value="sdalrg">Soda: large $2.50</option>
+                                <option value="juice">Juice $2.00</option>
+                                <option value="water">Water $1.25</option>
+                            </select>
+                        </label>
+
+                        <input type="submit" name="add" value="Add to cart" /><br />
+                    </fieldset>
+            
+                    <fieldset>
+                        <legend>View Your Order</legend>
+                        <label>
+                            <input type="submit" name="order" value="Your order" />
+                        </label>
+                    </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <script>
+
+
+
+
+
+            </script>
+
+    </body>
+</html>
